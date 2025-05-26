@@ -1,0 +1,8 @@
+Application: lammps
+Prediction File: specialization_points_5.json
+True Positives (TP): 14
+False Positives (FP): 3
+False Negatives (FN): 13
+Precision: 0.8235
+Recall: 0.5185
+F1 Score: 0.6364

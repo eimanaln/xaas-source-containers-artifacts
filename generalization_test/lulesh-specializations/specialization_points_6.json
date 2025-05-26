@@ -1,0 +1,48 @@
+{
+  "gpu_build": {
+    "value": false,
+    "build_flag": null
+  },
+  "gpu_backends": {},
+  "parallel_programming_libraries": {
+    "MPI": {
+      "used_as_default": true,
+      "build_flag": "-DUSE_MPI=1",
+      "minimum_version": null
+    },
+    "OpenMP": {
+      "used_as_default": true,
+      "build_flag": null,
+      "minimum_version": null
+    }
+  },
+  "linear_algebra_libraries": {},
+  "FFT_libraries": {},
+  "other_external_libraries": {
+    "Silo": {
+      "version": null,
+      "used_as_default": false,
+      "conditions": "WITH_SILO",
+      "build_flag": "-DVIZ_MESH"
+    }
+  },
+  "compiler_flags": [
+    "${OpenMP_CXX_FLAGS}"
+  ],
+  "optimization_build_flags": [],
+  "compilers": {
+    "CXX": {
+      "minimum_version": null
+    }
+  },
+  "architectures": [],
+  "simd_vectorization": {},
+  "build_system": {
+    "type": "cmake",
+    "minimum_version": "3.0"
+  },
+  "internal_build": {
+    "library_name": "None",
+    "build_flag": null
+  }
+}

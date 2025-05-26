@@ -1,0 +1,150 @@
+{
+    "CPU Info": {
+      "Architecture": "x86_64",
+      "Model Name": "Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz",
+      "Supported Vectorizations": [
+        "avx512f", "avx512dq", "avx512cd", "avx512bw", "avx512vl",
+        "avx2", "avx", "sse4_2", "sse4_1", "ssse3", "sse2", "sse"
+      ]
+    },
+    "Accelerators": {
+      "Accelerators": {
+        "lspci": [
+          "1c:00.0 3D controller: NVIDIA Corporation GV100GL [Tesla V100 PCIe 16GB] (rev a1)",
+          "1e:00.0 3D controller: NVIDIA Corporation GV100GL [Tesla V100 PCIe 16GB] (rev a1)",
+          "40:00.0 3D controller: NVIDIA Corporation GV100GL [Tesla V100 PCIe 16GB] (rev a1)",
+          "41:00.0 3D controller: NVIDIA Corporation GV100GL [Tesla V100 PCIe 16GB] (rev a1)"
+        ],
+        "nvidia": [
+          {"gpu": "Tesla V100-PCIE-16GB", "compute_cap": "7.0", "driver": "570.86.15"},
+          {"gpu": "Tesla V100-PCIE-16GB", "compute_cap": "7.0", "driver": "570.86.15"},
+          {"gpu": "Tesla V100-PCIE-16GB", "compute_cap": "7.0", "driver": "570.86.15"},
+          {"gpu": "Tesla V100-PCIE-16GB", "compute_cap": "7.0", "driver": "570.86.15"}
+        ]
+      },
+      "Driver Versions": {
+        "NVIDIA": "570.86.15"
+      }
+    },
+    "Parallel Libraries": {
+      "Intel MPI": {
+        "libmpi.so.12": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/release/libmpi.so.12",
+        "libmpi.so.12.0.0": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/release/libmpi.so.12.0.0",
+        "libmpi.so": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/release/libmpi.so",
+        "libmpi.so.12.0": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/release/libmpi.so.12.0",
+        "libmpifort.so.12.0.0": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/libmpifort.so.12.0.0",
+        "libmpifort.so": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/libmpifort.so",
+        "libmpicxx.so": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/libmpicxx.so",
+        "libmpicxx.so.12.0.0": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/libmpicxx.so.12.0.0",
+        "libmpicxx.so.12": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/libmpicxx.so.12",
+        "libmpifort.so.12": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/libmpifort.so.12",
+        "libmpicxx.so.12.0": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/libmpicxx.so.12.0",
+        "libmpifort.so.12.0": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mpi-2021.3.0-cimviyny3mny7u7jdpvg6kpxra5syfdw/mpi/2021.3.0/lib/libmpifort.so.12.0"
+      }
+    },
+    "FFT Libraries": {
+      "MKL": {
+        "shared_lib": "libmkl_core",
+        "path": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mkl-2021.3.0-7vtzbakydduwk5lkporwbhsd6znar5ib/mkl/2021.3.0/lib/intel64/libmkl_core.so",
+        "version": "Unknown Version"
+      },
+      "cufft": {
+        "shared_lib": "libcufft",
+        "path": "/users/ealnuaim/spack/opt/spack/linux-centos8-skylake_avx512/gcc-11.5.0/cuda-12.8.0-c47o4jmilkbmcx52laod7lw4roxu6bg6/lib64/libcufft.so.11.3.3.41",
+        "version": "11.3.3.41"
+      },
+      "cufftw": {
+        "shared_lib": "libcufftw",
+        "path": "/users/ealnuaim/spack/opt/spack/linux-centos8-skylake_avx512/gcc-11.5.0/cuda-12.8.0-c47o4jmilkbmcx52laod7lw4roxu6bg6/lib64/libcufftw.so.11.3.3.41",
+        "version": "11.3.3.41"
+      }
+    },
+    "linear algebra Libraries": {
+      "MKL": {
+        "installation_path": "/apps/ault/spack/opt/spack/linux-centos8-zen/gcc-8.4.1/intel-oneapi-mkl-2021.3.0-7vtzbakydduwk5lkporwbhsd6znar5ib/mkl/2021.3.0/lib/intel64",
+        "version": "8.4.1"
+      },
+      "BLAS": {
+        "installation_path": "/apps/ault/UES/easybuild/software/OpenBLAS/0.3.5-gompi-system/lib64",
+        "version": "0.3.5"
+      },
+      "LAPACK": {
+        "installation_path": "/apps/ault/UES/easybuild/software/LAPACK/3.8.0-gompi-system/lib",
+        "version": "3.8.0"
+      },
+      "OpenBLAS": {
+        "installation_path": "/apps/ault/UES/easybuild/software/OpenBLAS/0.3.5-gompi-system/lib64",
+        "version": "0.3.5"
+      }
+    },
+    "GPU Backends": {
+      "CUDA": {
+        "libraries": [
+          "/lib64/libcudadebugger.so.1",
+          "/lib64/libcuda.so.1",
+          "/lib/libcuda.so.1",
+          "/lib64/libcuda.so",
+          "/lib/libcuda.so"
+        ],
+        "version": "12.8"
+      },
+      "OpenCL": {
+        "libraries": [
+          "/lib64/libOpenCL.so.1",
+          "/lib/libOpenCL.so.1",
+          "/lib64/libOpenCL.so",
+          "/lib/libOpenCL.so"
+        ],
+        "version": "3.0"
+      },
+      "SYCL": {
+        "libraries": [],
+        "version": null
+      },
+      "HIP": {
+        "libraries": [],
+        "version": null
+      },
+      "ROCm": {
+        "libraries": [],
+        "version": "4.3.0"
+      }
+    },
+    "Loaded Modules": {
+      "intel-oneapi-mpi": "2021.3.0",
+      "glibc": "2.28-gcc-11.5.0-uvehlxw",
+      "cuda": "12.8.0-gcc-11.5.0-c47o4jm",
+      "llvm-amdgpu": "5.4.3",
+      "libdrm": "2.4.114",
+      "perl-file-which": "1.22",
+      "gompi": ".system",
+      "gcc-runtime": "11.5.0-gcc-11.5.0-47l2nku",
+      "msgpack-c": "3.1.1",
+      "comgr": "5.4.3",
+      "numactl": "2.0.14",
+      "perl-uri-encode": "1.1.1",
+      "binutils": ".2.32",
+      "libiconv": "1.17-gcc-11.5.0-c6ihj5a",
+      "rocblas": "5.4.3",
+      "mesa18": "18.3.6",
+      "hsakmt-roct": "5.4.3",
+      "rocminfo": "5.4.3",
+      "OpenBLAS": "0.3.5-gompi-system",
+      "xz": "5.4.6-gcc-11.5.0-h3r6jcj",
+      "ncurses": "6.2",
+      "glx": "1.4",
+      "libelf": "0.8.13",
+      "roctracer-dev-api": "5.4.3",
+      "LAPACK": "3.8.0-gompi-system",
+      "zlib-ng": "2.2.3-gcc-11.5.0-6tj75fm",
+      "z3": "4.8.9",
+      "libpciaccess": "0.16",
+      "hsa-rocr-dev": "5.4.3",
+      "hip": "5.4.3",
+      "intel-oneapi-mkl": "2021.3.0",
+      "libxml2": "2.13.5-gcc-11.5.0-4mujrvz",
+      "zlib": "1.2.11",
+      "libpthread-stubs": "0.4",
+      "perl": "5.34.0"
+    }
+  }

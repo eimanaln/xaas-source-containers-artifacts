@@ -1,0 +1,89 @@
+{
+    "vectorization_flags": {
+      "none": "-DGMX_SIMD=None",
+      "avx_256": "-DGMX_SIMD=AVX_256",
+      "avx_128_fma": "-DGMX_SIMD=AVX_128_FMA",
+      "avx2_128": "-DGMX_SIMD=AVX2_128",
+      "avx2_256": "-DGMX_SIMD=AVX2_256",
+      "auto": "-DGMX_SIMD=AUTO",
+      "sse4.1": "-DGMX_SIMD=SSE4.1",
+      "sse2": "-DGMX_SIMD=SSE2",
+      "avx_512": "-DGMX_SIMD=AVX_512"
+    },
+    "gpu_backends": {
+      "CUDA": {
+        "build_flag": "-DGMX_GPU=CUDA",
+        "version": "12.8"
+      },
+      "OpenCL": {
+        "build_flag": "-DGMX_GPU=OpenCL",
+        "version": "3.0"
+      },
+      "HIP": {
+        "build_flag": "-DGMX_GPU=HIP",
+        "version": "5.4.3"
+      }
+    },
+    "parallel_libraries": {
+      "intel-oneapi-mpi": {
+        "build_flag": "-DGMX_MPI",
+        "version": "2021.3.0",
+        "used_as_default": false,
+        "library_name": "intel-oneapi-mpi"
+      },
+      "Thread-MPI": {
+        "build_flag": "-DGMX_THREAD_MPI",
+        "version": "Unknown",
+        "used_as_default": true
+      },
+      "OpenMP": {
+        "build_flag": " ",
+        "version": "Unknown",
+        "used_as_default": true
+      }
+    },
+    "fft_libraries": {
+      "fftw3": {
+        "build_flag": "-DGMX_FFT_LIBRARY=fftw3",
+        "version": "Unknown",
+        "used_as_default": true
+      },
+      "fftpack[built-in]": {
+        "build_flag": "-DGMX_FFT_LIBRARY=fftpack[built-in]",
+        "version": "Built-in",
+        "used_as_default": false
+      },
+      "MKL (GPU)": {
+        "build_flag": "-DGMX_GPU_FFT_LIBRARY=MKL",
+        "version": "2021.3.0",
+        "used_as_default": false
+      },
+      "mkl (CPU)": {
+        "build_flag": "-DGMX_FFT_LIBRARY=mkl",
+        "version": "2021.3.0",
+        "used_as_default": false
+      },
+      "cuFFT": {
+        "build_flag": "-DGMX_GPU_FFT_LIBRARY=cuFFT",
+        "version": "Unknown",
+        "used_as_default": false
+      }
+    },
+    "linear_algebra_libraries": {
+      "MKL": {
+        "build_flag": null,
+        "version": "2021.3.0",
+        "used_as_default": false
+      },
+      "BLAS": {
+        "build_flag": null,
+        "version": "0.3.5",
+        "used_as_default": false
+      },
+      "LAPACK": {
+        "build_flag": null,
+        "version": "3.8.0",
+        "used_as_default": false
+      }
+    }
+  }

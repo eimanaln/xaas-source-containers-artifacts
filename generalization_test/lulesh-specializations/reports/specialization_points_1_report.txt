@@ -1,0 +1,8 @@
+Application: lulesh
+Prediction File: specialization_points_1.json
+True Positives (TP): 6
+False Positives (FP): 1
+False Negatives (FN): 1
+Precision: 0.8571
+Recall: 0.8571
+F1 Score: 0.8571

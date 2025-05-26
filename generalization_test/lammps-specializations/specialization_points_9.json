@@ -1,0 +1,185 @@
+{
+  "gpu_build": {
+    "value": true,
+    "build_flag": null
+  },
+  "gpu_backends": {
+    "CUDA": {
+      "used_as_default": false,
+      "build_flag": null,
+      "minimum_version": null
+    },
+    "HIP": {
+      "used_as_default": false,
+      "build_flag": null,
+      "minimum_version": null
+    }
+  },
+  "parallel_programming_libraries": {
+    "MPI": {
+      "used_as_default": false,
+      "build_flag": null,
+      "minimum_version": null
+    },
+    "OpenMP": {
+      "used_as_default": false,
+      "build_flag": null,
+      "minimum_version": null
+    }
+  },
+  "linear_algebra_libraries": {
+    "LAPACK": {
+      "used_as_default": false,
+      "build_flag": null,
+      "condition": "PKG_ATC OR PKG_AWPMD OR PKG_ML-QUIP OR PKG_ML-POD OR PKG_ELECTRODE OR PKG_RHEO OR BUILD_TOOLS"
+    },
+    "BLAS": {
+      "used_as_default": false,
+      "build_flag": null,
+      "condition": "PKG_ATC OR PKG_AWPMD OR PKG_ML-QUIP OR PKG_ML-POD OR PKG_ELECTRODE OR PKG_RHEO OR BUILD_TOOLS"
+    },
+    "linalg": {
+      "used_as_default": true,
+      "build_flag": null,
+      "condition": "NOT LAPACK_FOUND OR NOT BLAS_FOUND OR USE_INTERNAL_LINALG"
+    }
+  },
+  "FFT_libraries": {
+    "heFFTe": {
+      "built-in": false,
+      "used_as_default": false,
+      "dependencies": null,
+      "build_flag": null
+    },
+    "FFTW": {
+      "built-in": false,
+      "used_as_default": false,
+      "dependencies": null,
+      "build_flag": null
+    },
+    "MKL": {
+      "built-in": false,
+      "used_as_default": false,
+      "dependencies": null,
+      "build_flag": null
+    },
+    "builtin": {
+      "built-in": true,
+      "used_as_default": false,
+      "dependencies": "heFFTe backend stock",
+      "build_flag": null
+    }
+  },
+  "other_external_libraries": {
+    "ADIOS2": {
+      "version": "REQUIRED",
+      "used_as_default": false,
+      "conditions": "PKG_ADIOS",
+      "build_flag": null
+    },
+    "JPEG": {
+      "version": "REQUIRED",
+      "used_as_default": false,
+      "conditions": "WITH_JPEG",
+      "build_flag": "-DLAMMPS_JPEG"
+    },
+    "PNG": {
+      "version": "REQUIRED",
+      "used_as_default": false,
+      "conditions": "WITH_PNG",
+      "build_flag": "-DLAMMPS_PNG"
+    },
+    "ZLIB": {
+      "version": "REQUIRED",
+      "used_as_default": false,
+      "conditions": "WITH_PNG",
+      "build_flag": null
+    },
+    "GZIP": {
+      "version": "REQUIRED",
+      "used_as_default": false,
+      "conditions": "WITH_GZIP",
+      "build_flag": "-DLAMMPS_GZIP"
+    },
+    "FFMPEG": {
+      "version": "REQUIRED",
+      "used_as_default": false,
+      "conditions": "WITH_FFMPEG",
+      "build_flag": "-DLAMMPS_FFMPEG"
+    },
+    "HDF5": {
+      "version": null,
+      "used_as_default": false,
+      "conditions": "PKG_H5MD",
+      "build_flag": null
+    },
+    "ClangFormat": {
+      "version": "11.0",
+      "used_as_default": false,
+      "conditions": "Code formatting",
+      "build_flag": null
+    }
+  },
+  "compiler_flags": [
+    "-restrict",
+    "-fp-model fast=2",
+    "-no-prec-div",
+    "-qoverride-limits",
+    "-diag-disable=10441",
+    "-diag-disable=11074",
+    "-diag-disable=11076",
+    "-diag-disable=2196",
+    "-fp-model precise",
+    "-Wno-tautological-constant-compare",
+    "-Wno-unused-command-line-argument",
+    "-Minform=severe",
+    "-Xcudafe --diag_suppress=unrecognized_pragma,--diag_suppress=128",
+    "/Zc:__cplusplus",
+    "/wd4244",
+    "/wd4267",
+    "/wd4250",
+    "/EHsc",
+    "/utf-8",
+    "-fopenmp"
+  ],
+  "optimization_build_flags": [],
+  "compilers": {
+    "GNU": {
+      "minimum_version": "5.0"
+    },
+    "Intel": {
+      "minimum_version": null
+    },
+    "IntelLLVM": {
+      "minimum_version": null
+    },
+    "PGI": {
+      "minimum_version": null
+    },
+    "NVHPC": {
+      "minimum_version": null
+    },
+    "XLClang": {
+      "minimum_version": null
+    },
+    "AppleClang": {
+      "minimum_version": "10.0"
+    },
+    "Clang": {
+      "minimum_version": "10.0"
+    },
+    "CrayClang": {
+      "minimum_version": "10.0"
+    }
+  },
+  "architectures": [],
+  "simd_vectorization": {},
+  "build_system": {
+    "type": "cmake",
+    "minimum_version": "3.16"
+  },
+  "internal_build": {
+    "library_name": "linalg",
+    "build_flag": null
+  }
+}
